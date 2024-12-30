@@ -3,6 +3,7 @@ from nltk.tokenize import word_tokenize
 from nltk.tokenize import sent_tokenize
 from nltk.tokenize import blankline_tokenize
 from nltk.util import trigrams,bigrams,ngrams
+from nltk.corpus import stopwords
 #Tokenization
 #Stemming
 #Lemmatization
@@ -33,4 +34,8 @@ elif(s_option=='Trigrams'):
 elif(s_option=='N-grams'):
     ng=list(ngrams(n_st,4))
     out=ng
+st.write('All stop words are reflected here:')
+
+st.table(stopwords.words('english'))
+
 st.write(out)
